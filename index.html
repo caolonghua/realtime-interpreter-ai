@@ -1,174 +1,427 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="color-scheme" content="light dark" />
-    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#0a0a0c" media="(prefers-color-scheme: dark)" />
-    <meta
-      name="description"
-      content="Realtime Interpreter AI turns live speech into translated subtitles and translated headphone audio for meetings, videos, online classes, and international events."
-    />
-    <title>Realtime Interpreter AI</title>
-    <link rel="icon" type="image/png" href="./assets/app-icon.png" />
-    <link rel="apple-touch-icon" href="./assets/app-icon.png" />
-    <link rel="stylesheet" href="./styles.css" />
-  </head>
-  <body>
-    <header class="site-nav" aria-label="Primary">
-      <a class="brand" href="#top" aria-label="Realtime Interpreter AI">
-        <img src="./assets/app-icon.png" alt="" />
-        <span>Realtime Interpreter AI</span>
-      </a>
-      <nav class="nav-links">
-        <a href="#features" data-i18n="nav_features">Features</a>
-        <a href="#privacy" data-i18n="nav_privacy">Privacy</a>
-        <a href="#plans" data-i18n="nav_plans">Access</a>
-        <a href="#contact" data-i18n="nav_contact">Contact</a>
-      </nav>
-      <div class="nav-actions" role="group" aria-label="Language">
-        <label class="lang-picker">
-          <span class="visually-hidden" data-i18n="lang_label">Language</span>
-          <select id="lang-select" aria-label="Language">
-            <option value="en">English</option>
-            <option value="zh-Hans">简体中文</option>
-            <option value="zh-Hant">繁體中文</option>
-            <option value="ja">日本語</option>
-            <option value="ko">한국어</option>
-            <option value="fr">Français</option>
-            <option value="de">Deutsch</option>
-            <option value="es">Español</option>
-          </select>
-        </label>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="theme-color" content="#fbfbfd" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#0a0a0e" media="(prefers-color-scheme: dark)" />
+<title>Realtime Interpreter AI · 同声传译</title>
+<meta name="description" content="Realtime Interpreter AI turns live speech into translated subtitles and translated headphone audio for meetings, videos, online classes, and global events." />
+<link rel="icon" type="image/png" href="assets/app-icon.png" />
+<link rel="apple-touch-icon" href="assets/app-icon.png" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#top" aria-label="Realtime Interpreter AI">
+      <span class="brand-mark" aria-hidden="true">
+        <img src="assets/app-icon.png" alt="" />
+      </span>
+      <span class="brand-name">Realtime Interpreter AI</span>
+    </a>
+    <div class="nav-links">
+      <a href="#features" data-i18n="nav_features">功能</a>
+      <a href="#languages" data-i18n="nav_lang">语言</a>
+      <a href="#ipad" data-i18n="nav_ipad">iPad</a>
+      <a href="#privacy" data-i18n="nav_privacy">隐私</a>
+      <a href="#plans" data-i18n="nav_plans">套餐</a>
+      <a href="#contact" data-i18n="nav_contact">联系</a>
+    </div>
+    <div class="nav-tail">
+      <label class="lang-picker">
+        <span class="visually-hidden" data-i18n="lang_label">Language</span>
+        <select id="lang-select" aria-label="Language">
+          <option value="en">English</option>
+          <option value="zh-Hans">简体中文</option>
+          <option value="zh-Hant">繁體中文</option>
+          <option value="ja">日本語</option>
+          <option value="ko">한국어</option>
+          <option value="fr">Français</option>
+          <option value="de">Deutsch</option>
+          <option value="es">Español</option>
+        </select>
+      </label>
+      <a class="nav-cta" href="#download" data-i18n="nav_cta">下载</a>
+      <button class="nav-menu" id="navMenu" type="button" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="nav-drawer" id="navDrawer">
+    <a href="#features" data-i18n="nav_features">功能</a>
+    <a href="#languages" data-i18n="nav_lang">语言</a>
+    <a href="#ipad" data-i18n="nav_ipad">iPad</a>
+    <a href="#privacy" data-i18n="nav_privacy">隐私</a>
+    <a href="#plans" data-i18n="nav_plans">套餐</a>
+    <a href="#contact" data-i18n="nav_contact">联系</a>
+    <a href="#download" data-i18n="nav_cta">下载</a>
+  </div>
+</nav>
+
+<main id="top">
+
+<!-- ================= HERO ================= -->
+<section class="hero" data-screen-label="01 Hero">
+  <div class="hero-inner">
+    <p class="eyebrow reveal reveal-1" data-i18n="hero_eyebrow">已上架 App Store · iOS 17+ / iPadOS 17+</p>
+    <h1 class="reveal reveal-2" data-i18n-html="hero_title">同声传译，<br/><span class="accent">进入实时字幕时代。</span></h1>
+    <p class="hero-sub reveal reveal-3" data-i18n-html="hero_sub">把会议、视频、网课和国际活动里的每一句话，<br/>实时转化为字幕，并通过耳机播读译文。</p>
+    <div class="hero-ctas reveal reveal-4">
+      <a class="btn primary" href="https://apps.apple.com/app/id6770194336" data-i18n="hero_cta_primary">前往 App Store</a>
+      <a class="btn ghost" href="#features" data-i18n="hero_cta_secondary">了解功能</a>
+    </div>
+  </div>
+
+  <div class="hero-stage reveal reveal-4">
+    <div class="glow" aria-hidden="true"></div>
+    <div class="hero-devices">
+      <div class="phone phone-back" data-tilt="back">
+        <span class="phone-frame" aria-hidden="true"></span>
+        <img data-shot="iphone-about" src="assets/iphone-about.png" alt="Realtime Interpreter AI · About" loading="lazy" />
       </div>
-    </header>
-
-    <main id="top">
-      <section class="hero">
-        <div class="hero-copy">
-          <p class="eyebrow" data-i18n="hero_eyebrow">Available on the App Store</p>
-          <h1 data-i18n="hero_title">Live interpretation for the moments you cannot miss.</h1>
-          <p class="hero-subtitle" data-i18n="hero_subtitle">
-            Realtime Interpreter AI turns meetings, videos, online classes, and live events into translated captions and translated headphone audio.
-          </p>
-          <div class="hero-actions">
-            <a class="button primary" href="https://apps.apple.com/app/id6770194336" data-i18n="hero_cta">View on App Store</a>
-            <a class="button secondary" href="#features" data-i18n="hero_secondary">Explore features</a>
-          </div>
-        </div>
-        <div class="hero-stage" aria-label="App previews">
-          <img class="device ipad" data-shot="ipad-main" src="./assets/ipad-live.png" alt="Realtime Interpreter AI on iPad" />
-          <img class="device iphone" data-shot="iphone-main" src="./assets/iphone-live.png" alt="Live subtitles on iPhone" />
-        </div>
-      </section>
-
-      <section class="intro-band">
-        <p data-i18n="intro">
-          Not an offline translator. A lightweight language layer for live participation.
-        </p>
-      </section>
-
-      <section id="features" class="section feature-grid">
-        <article class="feature-copy">
-          <p class="eyebrow" data-i18n="features_eyebrow">Live intelligence</p>
-          <h2 data-i18n="features_title">Follow the conversation as it happens.</h2>
-          <p data-i18n="features_body">
-            Choose a target language and start listening. The app detects the input language automatically, shows translated captions, and can speak the translation through your headphones.
-          </p>
-        </article>
-        <div class="feature-list">
-          <div class="feature-item">
-            <span>01</span>
-            <h3 data-i18n="f1_title">Live translated captions</h3>
-            <p data-i18n="f1_body">Built for meetings, lectures, online courses, livestreams, and videos.</p>
-          </div>
-          <div class="feature-item">
-            <span>02</span>
-            <h3 data-i18n="f2_title">Translated headphone audio</h3>
-            <p data-i18n="f2_body">Hear the translation without interrupting the room.</p>
-          </div>
-          <div class="feature-item">
-            <span>03</span>
-            <h3 data-i18n="f3_title">History and Word export</h3>
-            <p data-i18n="f3_body">Save source text and translations for review, copy, and export.</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="showcase">
-        <div class="showcase-copy">
-          <p class="eyebrow" data-i18n="pip_eyebrow">Picture in Picture</p>
-          <h2 data-i18n="pip_title">Captions that float above what you are watching.</h2>
-          <p data-i18n="pip_body">
-            Use PiP captions on iPhone and iPad while watching videos, online classes, or meetings without constant app switching.
-          </p>
-        </div>
-        <img data-shot="iphone-main" src="./assets/iphone-pip-history.png" alt="PiP subtitles" />
-      </section>
-
-      <section class="section history-layout">
-        <div>
-          <p class="eyebrow" data-i18n="history_eyebrow">From live to archive</p>
-          <h2 data-i18n="history_title">A live session can become a useful record.</h2>
-          <p data-i18n="history_body">
-            History saves recognized source text and translated text. After a meeting, review key points, copy text, or export a Word document.
-          </p>
-        </div>
-        <img data-shot="ipad-main" src="./assets/ipad-history-export.png" alt="History and export on iPad" />
-      </section>
-
-      <section id="privacy" class="privacy-panel">
-        <div>
-          <p class="eyebrow" data-i18n="privacy_eyebrow">Privacy by design</p>
-          <h2 data-i18n="privacy_title">Realtime processing should still feel controlled.</h2>
-        </div>
-        <div class="privacy-points">
-          <p data-i18n="privacy_1">The app asks for explicit AI data-processing consent before sending audio.</p>
-          <p data-i18n="privacy_2">No permanent service key is embedded in the app; developer service access uses short-lived credentials.</p>
-          <p data-i18n="privacy_3">History is user-managed and can be viewed, copied, exported, or deleted.</p>
-        </div>
-      </section>
-
-      <section id="plans" class="section plans-layout">
-        <img data-shot="iphone-main" src="./assets/iphone-plans.png" alt="Plans and App Credits" />
-        <div>
-          <p class="eyebrow" data-i18n="plans_eyebrow">Flexible access</p>
-          <h2 data-i18n="plans_title">Try 1 minute free, or bring your own service credential.</h2>
-          <p data-i18n="plans_body">
-            Use App Credits for a quick start, or enter your own service credential. Purchase screens include privacy policy and terms links.
-          </p>
-          <a class="button primary" href="https://apps.apple.com/app/id6770194336" data-i18n="plans_cta">Download on App Store</a>
-        </div>
-      </section>
-
-      <section id="contact" class="contact-panel">
-        <div class="contact-card">
-          <p class="eyebrow" data-i18n="contact_eyebrow">Support & Contact</p>
-          <h2 data-i18n="contact_title">We are here when you need us.</h2>
-          <p data-i18n="contact_body">
-            Questions about the app, your subscription, or privacy? Reach us directly. We typically respond within one business day.
-          </p>
-          <a class="button primary contact-mail" href="mailto:10000@caolonghua.com">10000@caolonghua.com</a>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-brand">
-        <img src="./assets/app-icon.png" alt="" />
-        <div>
-          <strong>Realtime Interpreter AI</strong>
-          <p data-i18n="footer_tagline">Live translated subtitles and voice.</p>
+      <div class="phone phone-front" data-tilt="front">
+        <span class="phone-frame" aria-hidden="true"></span>
+        <img data-shot="iphone-main" src="assets/iphone-main.png" alt="Realtime Interpreter AI · Main" loading="lazy" />
+        <div class="phone-badge" aria-hidden="true">
+          <span class="dot"></span>
+          <span data-i18n="badge_live">LIVE</span>
         </div>
       </div>
-      <div class="footer-links">
-        <a href="https://caolonghua.github.io/realtime-interpreter-ai/privacy.html" data-i18n="footer_privacy">Privacy Policy</a>
-        <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" data-i18n="footer_terms">Terms of Use (EULA)</a>
-        <a href="#contact" data-i18n="footer_support">Support</a>
-        <a href="https://apps.apple.com/app/id6770194336" data-i18n="footer_appstore">App Store</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= INTRO ================= -->
+<section class="intro-band" data-screen-label="02 Intro">
+  <p class="reveal" data-i18n-html="intro_body">它不是一个离线翻译器。<br/><span class="em">它是你随身的跨语言参与层——现场跟随、耳机理解、事后复盘。</span></p>
+</section>
+
+<!-- ================= FEATURES SCROLLY ================= -->
+<section id="features" class="features" data-screen-label="03 Features">
+  <div class="features-head reveal">
+    <p class="eyebrow" data-i18n="features_eyebrow">Live intelligence</p>
+    <h2 data-i18n-html="features_title">让你在对话发生时<br/>就跟上每一句话。</h2>
+    <p data-i18n="features_body">选择目标语言后开始收音，输入语言自动识别。译文以字幕形式实时出现，开启耳机播读后，翻译结果会同步朗读，减少盯屏负担。</p>
+  </div>
+
+  <div class="scrolly">
+    <div class="scrolly-sticky">
+      <div class="phone phone-feature">
+        <span class="phone-frame" aria-hidden="true"></span>
+        <div class="phone-stack" id="phoneStack">
+          <img class="ps-img is-active" data-step="1" data-shot="iphone-main"     src="assets/iphone-main.png" alt="Main controls" loading="lazy" />
+          <img class="ps-img"           data-step="2" data-shot="iphone-welcome"  src="assets/iphone-welcome.png" alt="Onboarding" loading="lazy" />
+          <img class="ps-img"           data-step="3" data-shot="iphone-about"    src="assets/iphone-about.png" alt="About" loading="lazy" />
+          <img class="ps-img"           data-step="4" data-shot="iphone-plans"    src="assets/iphone-plans.png" alt="Plans" loading="lazy" />
+        </div>
+        <div class="phone-pings" aria-hidden="true">
+          <span class="ping ping-1"></span>
+          <span class="ping ping-2"></span>
+          <span class="ping ping-3"></span>
+        </div>
       </div>
-    </footer>
-    <script src="./script.js"></script>
-  </body>
+    </div>
+
+    <div class="scrolly-steps">
+      <div class="step is-active" data-step="1" data-img="iphone-main">
+        <div class="num">01 · LIVE</div>
+        <h3 data-i18n="step1_title">一屏控住整场同传。</h3>
+        <p data-i18n="step1_body">选目标语言、麦克风或电脑外放、耳机朗读与原文保留，开始按钮一按到位。剩余额度始终在标题旁可见。</p>
+        <ul class="step-bullets">
+          <li data-i18n="step1_b1">人声 / 耳机 · 电脑外放双输入</li>
+          <li data-i18n="step1_b2">耳机朗读 · 实时播读译文</li>
+          <li data-i18n="step1_b3">画中画字幕 · 一键开启</li>
+        </ul>
+      </div>
+      <div class="step" data-step="2" data-img="iphone-welcome">
+        <div class="num">02 · ENGINE</div>
+        <h3 data-i18n="step2_title">实时 AI 翻译引擎。</h3>
+        <p data-i18n="step2_body">采用新一代实时语音翻译引擎，专为同声传译优化——低延迟、自然语气、富有表现力。</p>
+        <ul class="step-bullets">
+          <li data-i18n="step2_b1">亚秒级延迟，适合会议与讲座</li>
+          <li data-i18n="step2_b2">13 种目标语言自然语音输出</li>
+          <li data-i18n="step2_b3">70+ 种输入语言，模型自动识别</li>
+        </ul>
+      </div>
+      <div class="step" data-step="3" data-img="iphone-about">
+        <div class="num">03 · CLARITY</div>
+        <h3 data-i18n-html="step3_title">每一项能力<br/>都摆在你面前。</h3>
+        <p data-i18n="step3_body">同声传译、多语言、画中画、隐私优先——四大能力都标注得清清楚楚，让你在介绍 App 时也能直接抄走这页设计。</p>
+        <ul class="step-bullets">
+          <li data-i18n="step3_b1">特性卡片化展示</li>
+          <li data-i18n="step3_b2">EULA 与隐私政策一目了然</li>
+          <li data-i18n="step3_b3">版本与构建号清晰可见</li>
+        </ul>
+      </div>
+      <div class="step" data-step="4" data-img="iphone-plans">
+        <div class="num">04 · PRICING</div>
+        <h3 data-i18n="step4_title">按需付费，从一分钟开始。</h3>
+        <p data-i18n="step4_body">免费试用 1 分钟。按次购买分钟包，或选择月度套餐；也可以自带 OpenAI API Key，零额外费用。</p>
+        <ul class="step-bullets">
+          <li data-i18n="step4_b1">8 / 30 / 90 / 200 分钟包</li>
+          <li data-i18n="step4_b2">轻量 / 专业 / 高频月卡</li>
+          <li data-i18n="step4_b3">自带 API Key 完全免费</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LANGUAGES MARQUEE ================= -->
+<section id="languages" class="languages" data-screen-label="04 Languages">
+  <div class="lang-head reveal">
+    <p class="eyebrow" data-i18n="lang_eyebrow">Languages</p>
+    <h2 data-i18n-html="lang_title">选定输出，<br/>畅说任意输入。</h2>
+    <p class="sub" data-i18n="lang_sub">选好你的目标语言一次，模型会自动识别说话者使用的任意语言，并以你选定的语言进行语音与文字翻译。</p>
+  </div>
+
+  <div class="lang-stage">
+    <div class="lang-visual reveal">
+      <div class="phone phone-tilt-left">
+        <span class="phone-frame" aria-hidden="true"></span>
+        <img data-shot="iphone-languages" src="assets/iphone-languages.png" alt="Languages onboarding" loading="lazy" />
+      </div>
+      <div class="lang-rings" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <div class="lang-copy">
+      <div class="lang-row reveal">
+        <span class="lang-label" data-i18n="lang_output">输出 · 13 种</span>
+        <div class="marquee" data-speed="40">
+          <div class="marquee-track">
+            <span>中文</span><span>English</span><span>日本語</span><span>한국어</span><span>Français</span><span>Deutsch</span><span>Español</span><span>Italiano</span><span>Português</span><span>العربية</span><span>Русский</span><span>हिन्दी</span><span>Türkçe</span>
+            <span>中文</span><span>English</span><span>日本語</span><span>한국어</span><span>Français</span><span>Deutsch</span><span>Español</span><span>Italiano</span><span>Português</span><span>العربية</span><span>Русский</span><span>हिन्दी</span><span>Türkçe</span>
+          </div>
+        </div>
+      </div>
+      <div class="lang-row reveal reveal-2">
+        <span class="lang-label muted" data-i18n="lang_input">输入 · 70+ 自动识别</span>
+        <div class="marquee reverse" data-speed="55">
+          <div class="marquee-track">
+            <span>EN</span><span>ZH</span><span>JA</span><span>KO</span><span>FR</span><span>DE</span><span>ES</span><span>IT</span><span>PT</span><span>AR</span><span>RU</span><span>HI</span><span>TR</span><span>VI</span><span>TH</span><span>ID</span><span>NL</span><span>PL</span><span>SV</span><span>FI</span><span>DA</span><span>NO</span><span>UK</span><span>HE</span>
+            <span>EN</span><span>ZH</span><span>JA</span><span>KO</span><span>FR</span><span>DE</span><span>ES</span><span>IT</span><span>PT</span><span>AR</span><span>RU</span><span>HI</span><span>TR</span><span>VI</span><span>TH</span><span>ID</span><span>NL</span><span>PL</span><span>SV</span><span>FI</span><span>DA</span><span>NO</span><span>UK</span><span>HE</span>
+          </div>
+        </div>
+      </div>
+      <div class="lang-stats reveal reveal-3">
+        <div><b>13</b><span data-i18n="lang_stat_1">输出语言</span></div>
+        <div><b>70+</b><span data-i18n="lang_stat_2">输入识别</span></div>
+        <div><b>1</b><span data-i18n="lang_stat_3">次选定，全程通用</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PIP DARK ================= -->
+<section id="pip" class="dark-band" data-screen-label="05 PiP">
+  <div class="split">
+    <div class="split-copy">
+      <p class="eyebrow on-dark" data-i18n="pip_eyebrow">Picture in Picture</p>
+      <h2 data-i18n-html="pip_title">字幕悬浮，<br/>覆在你正在看的内容之上。</h2>
+      <p data-i18n="pip_body">在 iPhone 和 iPad 上开启画中画字幕——观看视频、上网课或参加远程会议时，无需在窗口间来回切换。</p>
+      <ul class="dark-bullets">
+        <li data-i18n="pip_b1">系统级悬浮窗，可拖动到任意位置</li>
+        <li data-i18n="pip_b2">支持锁屏后继续显示字幕</li>
+        <li data-i18n="pip_b3">与任何 App 同时使用，无需切换</li>
+      </ul>
+    </div>
+    <div class="split-visual">
+      <div class="phone phone-pip">
+        <span class="phone-frame light" aria-hidden="true"></span>
+        <div class="pip-screen">
+          <div class="pip-status">
+            <span>9:41</span>
+            <span class="status-icons">
+              <span class="si-bars"><i></i><i></i><i></i><i></i></span>
+              <span class="si-wifi"></span>
+              <span class="si-batt"></span>
+            </span>
+          </div>
+          <div class="pip-video" aria-hidden="true">
+            <div class="pip-stripes"></div>
+            <div class="pip-title">Stanford CS231n<small data-i18n="pip_lecture">Lecture 9 · Convolutional Networks</small></div>
+            <div class="pip-controls"><span>⤺</span><span>▶︎</span><span>⤻</span></div>
+          </div>
+          <div class="pip-overlay" id="pipOverlay">
+            <div class="pip-meta">译文 · 中文</div>
+            <div class="pip-src" id="pipSrc">"…the convolutional layer learns local features in stages."</div>
+            <div class="pip-dst" id="pipDst">卷积层会分阶段学习局部特征。</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= iPad ================= -->
+<section id="ipad" class="ipad-section" data-screen-label="06 iPad">
+  <div class="ipad-head reveal">
+    <p class="eyebrow" data-i18n="ipad_eyebrow">Designed for iPad</p>
+    <h2 data-i18n-html="ipad_title">在更大的画布上，<br/>一切都更从容。</h2>
+    <p data-i18n="ipad_body">原文与译文并排展示，控件横向铺开，套餐与关于页保留 iPad 优先的留白节奏。无需缩放，原生 iPadOS 体验。</p>
+  </div>
+
+  <div class="ipad-stage">
+    <div class="ipad-device reveal">
+      <span class="ipad-frame" aria-hidden="true"></span>
+      <div class="ipad-stack" id="ipadStack">
+        <img class="ips-img is-active" data-step="1" data-shot="ipad-main"  src="assets/ipad-main.png" alt="iPad · Main" loading="lazy" />
+        <img class="ips-img"           data-step="2" data-shot="ipad-about" src="assets/ipad-about.png" alt="iPad · About" loading="lazy" />
+        <img class="ips-img"           data-step="3" data-shot="ipad-plans" src="assets/ipad-plans.png" alt="iPad · Plans" loading="lazy" />
+      </div>
+    </div>
+    <div class="ipad-thumbs reveal" id="ipadThumbs">
+      <button class="ipad-thumb is-active" data-step="1">
+        <img data-shot="ipad-main" src="assets/ipad-main.png" alt="Main" loading="lazy" />
+        <span data-i18n="ipad_t1">主界面</span>
+      </button>
+      <button class="ipad-thumb" data-step="2">
+        <img data-shot="ipad-about" src="assets/ipad-about.png" alt="About" loading="lazy" />
+        <span data-i18n="ipad_t2">关于</span>
+      </button>
+      <button class="ipad-thumb" data-step="3">
+        <img data-shot="ipad-plans" src="assets/ipad-plans.png" alt="Plans" loading="lazy" />
+        <span data-i18n="ipad_t3">套餐</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRIVACY ================= -->
+<section id="privacy" class="privacy" data-screen-label="07 Privacy">
+  <p class="eyebrow reveal" data-i18n="privacy_eyebrow">Privacy by design</p>
+  <h2 class="reveal" data-i18n-html="privacy_title">实时处理，<br/>也要让用户握有控制权。</h2>
+  <p class="sub reveal" data-i18n="privacy_sub">每一处涉及音频的环节都被显式提示、最小授权，并由你保留处置权。</p>
+  <div class="privacy-grid">
+    <div class="privacy-card reveal">
+      <div class="icon" style="background:oklch(0.96 0.03 250);color:oklch(0.55 0.20 250)">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <h3 data-i18n="p1_title">显式授权</h3>
+      <p data-i18n="p1_body">开始前显示 AI 数据处理同意提示，用户确认后才发送音频。</p>
+    </div>
+    <div class="privacy-card reveal reveal-2">
+      <div class="icon" style="background:oklch(0.96 0.04 155);color:oklch(0.55 0.16 155)">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+      </div>
+      <h3 data-i18n="p2_title">短时凭证</h3>
+      <p data-i18n="p2_body">App 不内置永久服务密钥，开发者服务使用短时授权凭证。</p>
+    </div>
+    <div class="privacy-card reveal reveal-3">
+      <div class="icon" style="background:oklch(0.96 0.04 30);color:oklch(0.6 0.18 30)">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M9 11v6M15 11v6M5 7l1 13a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2l1-13M9 7V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3"/></svg>
+      </div>
+      <h3 data-i18n="p3_title">用户掌控</h3>
+      <p data-i18n="p3_body">历史记录由你管理：可查看、复制、导出，或随时删除。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PLANS ================= -->
+<section id="plans" class="plans" data-screen-label="08 Plans">
+  <div class="plans-head">
+    <p class="eyebrow reveal" data-i18n="plans_eyebrow">Flexible access</p>
+    <h2 class="reveal" data-i18n-html="plans_title">免费试用 1 分钟，<br/>或自带 OpenAI Key。</h2>
+    <p class="sub reveal" data-i18n="plans_sub">普通用户用 App 内额度快速开始；技术用户可以填写自己的服务凭证，更细控制成本与延迟。</p>
+  </div>
+
+  <div class="plans-wrap">
+    <div class="plans-visual reveal">
+      <div class="phone phone-tilt-right">
+        <span class="phone-frame" aria-hidden="true"></span>
+        <img data-shot="iphone-plans" src="assets/iphone-plans.png" alt="Plans" loading="lazy" />
+      </div>
+    </div>
+
+    <div class="plans-grid">
+      <div class="plan-card reveal">
+        <span class="plan-tag" data-i18n="plan_tag_a">按次购买</span>
+        <ul class="plan-list">
+          <li><span data-i18n="pkg_8">8 分钟包</span><b>US$0.99</b></li>
+          <li><span data-i18n="pkg_30">30 分钟包 <em data-i18n="pkg_30_note">· 推荐</em></span><b>US$2.99</b></li>
+          <li><span data-i18n="pkg_90">90 分钟包</span><b>US$6.99</b></li>
+          <li><span data-i18n="pkg_200">200 分钟包 <em data-i18n="pkg_200_note">· 单价最低</em></span><b>US$14.99</b></li>
+        </ul>
+      </div>
+      <div class="plan-card reveal reveal-2">
+        <span class="plan-tag" data-i18n="plan_tag_b">月度套餐</span>
+        <ul class="plan-list">
+          <li><span data-i18n="pkg_light">轻量月卡 <em data-i18n="pkg_light_note">· 50 分钟 / 月</em></span><b>US$3.99</b></li>
+          <li><span data-i18n="pkg_pro">专业月卡 <em data-i18n="pkg_pro_note">· 120 分钟 / 月</em></span><b>US$7.99</b></li>
+          <li><span data-i18n="pkg_hf">高频月卡 <em data-i18n="pkg_hf_note">· 200 分钟 / 月</em></span><b>US$12.99</b></li>
+        </ul>
+        <p class="plan-foot" data-i18n="plan_foot">订阅每月自动续费，可随时取消。</p>
+      </div>
+      <div class="plan-card featured reveal reveal-3">
+        <span class="plan-tag" data-i18n="plan_tag_c">Bring your own</span>
+        <h4 data-i18n="byo_title">自带 OpenAI API Key</h4>
+        <p data-i18n="byo_body">在 App 内填写你自己的 Key，所有调用走你自己的账户，App 端零额外费用。</p>
+        <ul class="bullets">
+          <li data-i18n="byo_b1">完全自控成本与延迟</li>
+          <li data-i18n="byo_b2">面向开发者与团队</li>
+          <li data-i18n="byo_b3">历史记录仍保存在本机</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="contact" data-screen-label="09 Contact">
+  <div class="contact-card reveal">
+    <p class="eyebrow" data-i18n="contact_eyebrow">Support & Contact</p>
+    <h2 data-i18n-html="contact_title">需要时<br/>我们一直在。</h2>
+    <p class="sub" data-i18n="contact_body">关于 App、订阅或隐私的问题，欢迎直接联系。通常我们会在一个工作日内回复。</p>
+    <a class="btn primary contact-mail" href="mailto:10000@caolonghua.com">10000@caolonghua.com</a>
+  </div>
+</section>
+
+<!-- ================= FINAL CTA ================= -->
+<section id="download" class="final" data-screen-label="10 Download">
+  <p class="eyebrow reveal" data-i18n="final_eyebrow">Ready when you are</p>
+  <h2 class="reveal" data-i18n-html="final_title">下一场跨语言对话，<br/>由你掌握。</h2>
+  <div class="hero-ctas reveal" style="margin-top:36px">
+    <a class="appstore-btn" href="https://apps.apple.com/app/id6770194336">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.05 12.04c0-1.93 1.58-2.86 1.65-2.9-.9-1.32-2.3-1.5-2.8-1.52-1.18-.12-2.32.7-2.92.7-.6 0-1.54-.69-2.54-.67-1.3.02-2.5.76-3.17 1.93-1.36 2.36-.35 5.85.96 7.77.65.94 1.4 2 2.4 1.96.97-.04 1.34-.62 2.5-.62s1.5.62 2.55.6c1.06-.02 1.72-.96 2.36-1.9.75-1.09 1.06-2.15 1.08-2.2-.02-.01-2.07-.79-2.07-3.15zM15.15 6.4c.53-.65.88-1.55.78-2.45-.76.03-1.68.51-2.23 1.15-.49.57-.92 1.49-.8 2.37.85.07 1.72-.43 2.25-1.07z"/></svg>
+      <span class="stack"><small data-i18n="appstore_pre">Download on the</small><span data-i18n="appstore_main">App Store</span></span>
+    </a>
+    <a class="btn ghost" href="#features" data-i18n="final_secondary">查看所有功能</a>
+  </div>
+  <div class="badges reveal">
+    <span data-i18n="badge_os">iOS 17+ / iPadOS 17+</span><span>·</span><span data-i18n="badge_dev">iPhone & iPad</span><span>·</span><span data-i18n="badge_lang">中文 / English / 日本語 / 한국어 / Français / Deutsch / Español</span>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="assets/app-icon.png" alt="" />
+      <div>
+        <strong>Realtime Interpreter AI</strong>
+        <p data-i18n="footer_tagline">实时翻译字幕与耳机播读</p>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="https://caolonghua.github.io/realtime-interpreter-ai/privacy.html" data-i18n="footer_privacy">隐私政策</a>
+      <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" data-i18n="footer_terms">使用条款 (EULA)</a>
+      <a href="#contact" data-i18n="footer_support">支持</a>
+      <a href="https://apps.apple.com/app/id6770194336" data-i18n="footer_appstore">App Store</a>
+    </div>
+  </div>
+  <div class="footer-meta">
+    <span>© 2026 Realtime Interpreter AI</span>
+    <a href="mailto:10000@caolonghua.com">10000@caolonghua.com</a>
+  </div>
+</footer>
+
+<script src="i18n.js"></script>
+<script src="script.js"></script>
+</body>
 </html>
