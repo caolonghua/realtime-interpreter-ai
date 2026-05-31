@@ -8,8 +8,9 @@
 <meta name="theme-color" content="#0a0a0e" media="(prefers-color-scheme: dark)" />
 <title>Realtime Interpreter AI · 同声传译</title>
 <meta name="description" content="Realtime Interpreter AI turns live speech into translated subtitles and translated headphone audio for meetings, videos, online classes, and global events." />
-<link rel="icon" type="image/png" href="assets/app-icon.png" />
-<link rel="apple-touch-icon" href="assets/app-icon.png" />
+<link rel="icon" type="image/png" href="assets/optimized/app-icon.png" />
+<link rel="apple-touch-icon" href="assets/optimized/app-icon.png" />
+<link rel="preload" as="image" href="assets/optimized/iphone-main.jpg" />
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -19,7 +20,7 @@
   <div class="nav-inner">
     <a class="brand" href="#top" aria-label="Realtime Interpreter AI">
       <span class="brand-mark" aria-hidden="true">
-        <img src="assets/app-icon.png" alt="" />
+        <img src="assets/optimized/app-icon.png" alt="" />
       </span>
       <span class="brand-name">Realtime Interpreter AI</span>
     </a>
@@ -81,11 +82,11 @@
     <div class="hero-devices">
       <div class="phone phone-back" data-tilt="back">
         <span class="phone-frame" aria-hidden="true"></span>
-        <img data-shot="iphone-about" src="assets/iphone-about.png" alt="Realtime Interpreter AI · About" loading="lazy" />
+        <img data-shot="iphone-about" src="assets/optimized/iphone-about.jpg" alt="Realtime Interpreter AI · About" loading="lazy" decoding="async" />
       </div>
       <div class="phone phone-front" data-tilt="front">
         <span class="phone-frame" aria-hidden="true"></span>
-        <img data-shot="iphone-main" src="assets/iphone-main.png" alt="Realtime Interpreter AI · Main" loading="lazy" />
+        <img data-shot="iphone-main" src="assets/optimized/iphone-main.jpg" alt="Realtime Interpreter AI · Main" loading="eager" decoding="async" fetchpriority="high" />
         <div class="phone-badge" aria-hidden="true">
           <span class="dot"></span>
           <span data-i18n="badge_live">LIVE</span>
@@ -113,10 +114,10 @@
       <div class="phone phone-feature">
         <span class="phone-frame" aria-hidden="true"></span>
         <div class="phone-stack" id="phoneStack">
-          <img class="ps-img is-active" data-step="1" data-shot="iphone-main"     src="assets/iphone-main.png" alt="Main controls" loading="lazy" />
-          <img class="ps-img"           data-step="2" data-shot="iphone-welcome"  src="assets/iphone-welcome.png" alt="Onboarding" loading="lazy" />
-          <img class="ps-img"           data-step="3" data-shot="iphone-about"    src="assets/iphone-about.png" alt="About" loading="lazy" />
-          <img class="ps-img"           data-step="4" data-shot="iphone-plans"    src="assets/iphone-plans.png" alt="Plans" loading="lazy" />
+          <img class="ps-img is-active" data-step="1" data-shot="iphone-main"     src="assets/optimized/iphone-main.jpg" alt="Main controls" loading="lazy" decoding="async" />
+          <img class="ps-img"           data-step="2" data-shot="iphone-welcome"  src="assets/optimized/iphone-welcome.jpg" alt="Onboarding" loading="lazy" decoding="async" />
+          <img class="ps-img"           data-step="3" data-shot="iphone-about"    src="assets/optimized/iphone-about.jpg" alt="About" loading="lazy" decoding="async" />
+          <img class="ps-img"           data-step="4" data-shot="iphone-plans"    src="assets/optimized/iphone-plans.jpg" alt="Plans" loading="lazy" decoding="async" />
         </div>
         <div class="phone-pings" aria-hidden="true">
           <span class="ping ping-1"></span>
@@ -183,7 +184,7 @@
     <div class="lang-visual reveal">
       <div class="phone phone-tilt-left">
         <span class="phone-frame" aria-hidden="true"></span>
-        <img data-shot="iphone-languages" src="assets/iphone-languages.png" alt="Languages onboarding" loading="lazy" />
+        <img data-shot="iphone-languages" src="assets/optimized/iphone-languages.jpg" alt="Languages onboarding" loading="lazy" decoding="async" />
       </div>
       <div class="lang-rings" aria-hidden="true">
         <span></span><span></span><span></span>
@@ -270,22 +271,22 @@
     <div class="ipad-device reveal">
       <span class="ipad-frame" aria-hidden="true"></span>
       <div class="ipad-stack" id="ipadStack">
-        <img class="ips-img is-active" data-step="1" data-shot="ipad-main"  src="assets/ipad-main.png" alt="iPad · Main" loading="lazy" />
-        <img class="ips-img"           data-step="2" data-shot="ipad-about" src="assets/ipad-about.png" alt="iPad · About" loading="lazy" />
-        <img class="ips-img"           data-step="3" data-shot="ipad-plans" src="assets/ipad-plans.png" alt="iPad · Plans" loading="lazy" />
+        <img class="ips-img is-active" data-step="1" data-shot="ipad-main"  src="assets/optimized/ipad-main.jpg" alt="iPad · Main" loading="lazy" decoding="async" />
+        <img class="ips-img"           data-step="2" data-shot="ipad-about" src="assets/optimized/ipad-about.jpg" alt="iPad · About" loading="lazy" decoding="async" />
+        <img class="ips-img"           data-step="3" data-shot="ipad-plans" src="assets/optimized/ipad-plans.jpg" alt="iPad · Plans" loading="lazy" decoding="async" />
       </div>
     </div>
     <div class="ipad-thumbs reveal" id="ipadThumbs">
       <button class="ipad-thumb is-active" data-step="1">
-        <img data-shot="ipad-main" src="assets/ipad-main.png" alt="Main" loading="lazy" />
+        <img data-shot="ipad-main" src="assets/optimized/ipad-main.jpg" alt="Main" loading="lazy" decoding="async" />
         <span data-i18n="ipad_t1">主界面</span>
       </button>
       <button class="ipad-thumb" data-step="2">
-        <img data-shot="ipad-about" src="assets/ipad-about.png" alt="About" loading="lazy" />
+        <img data-shot="ipad-about" src="assets/optimized/ipad-about.jpg" alt="About" loading="lazy" decoding="async" />
         <span data-i18n="ipad_t2">关于</span>
       </button>
       <button class="ipad-thumb" data-step="3">
-        <img data-shot="ipad-plans" src="assets/ipad-plans.png" alt="Plans" loading="lazy" />
+        <img data-shot="ipad-plans" src="assets/optimized/ipad-plans.jpg" alt="Plans" loading="lazy" decoding="async" />
         <span data-i18n="ipad_t3">套餐</span>
       </button>
     </div>
@@ -334,7 +335,7 @@
     <div class="plans-visual reveal">
       <div class="phone phone-tilt-right">
         <span class="phone-frame" aria-hidden="true"></span>
-        <img data-shot="iphone-plans" src="assets/iphone-plans.png" alt="Plans" loading="lazy" />
+        <img data-shot="iphone-plans" src="assets/optimized/iphone-plans.jpg" alt="Plans" loading="lazy" decoding="async" />
       </div>
     </div>
 
@@ -402,14 +403,14 @@
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-brand">
-      <img src="assets/app-icon.png" alt="" />
+      <img src="assets/optimized/app-icon.png" alt="" />
       <div>
         <strong>Realtime Interpreter AI</strong>
         <p data-i18n="footer_tagline">实时翻译字幕与耳机播读</p>
       </div>
     </div>
     <div class="footer-links">
-      <a href="https://caolonghua.github.io/realtime-interpreter-ai/privacy.html" data-i18n="footer_privacy">隐私政策</a>
+      <a href="https://caolonghua.com.cn/privacy.html" data-i18n="footer_privacy">隐私政策</a>
       <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" data-i18n="footer_terms">使用条款 (EULA)</a>
       <a href="#contact" data-i18n="footer_support">支持</a>
       <a href="https://apps.apple.com/app/id6770194336" data-i18n="footer_appstore">App Store</a>
