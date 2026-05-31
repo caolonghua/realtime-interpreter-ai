@@ -1,394 +1,174 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Privacy Policy — Realtime Interpreter AI</title>
-<style>
-  :root {
-    --bg: #f5f5f7;
-    --card: #ffffff;
-    --text: #1d1d1f;
-    --muted: #6e6e73;
-    --accent: #0071e3;
-    --border: #d2d2d7;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #000;
-      --card: #1c1c1e;
-      --text: #f5f5f7;
-      --muted: #98989d;
-      --accent: #0a84ff;
-      --border: #38383a;
-    }
-  }
-  * { box-sizing: border-box; }
-  html, body {
-    margin: 0;
-    padding: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue",
-                 "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-    color: var(--text);
-    background: var(--bg);
-    line-height: 1.65;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  .wrap {
-    max-width: 820px;
-    margin: 0 auto;
-    padding: 48px 24px 96px;
-  }
-  header {
-    text-align: center;
-    margin-bottom: 32px;
-  }
-  header h1 {
-    font-size: 36px;
-    font-weight: 700;
-    margin: 0 0 8px;
-    letter-spacing: -0.5px;
-  }
-  header .subtitle {
-    color: var(--muted);
-    font-size: 17px;
-    margin: 0;
-  }
-  header .effective {
-    color: var(--muted);
-    font-size: 13px;
-    margin-top: 8px;
-  }
-  .lang-switch {
-    text-align: center;
-    margin: 32px 0;
-  }
-  .lang-switch a {
-    color: var(--accent);
-    text-decoration: none;
-    font-size: 15px;
-    padding: 8px 16px;
-    border: 1px solid var(--border);
-    border-radius: 18px;
-    margin: 0 4px;
-    display: inline-block;
-    transition: background 0.2s;
-  }
-  .lang-switch a:hover {
-    background: var(--card);
-  }
-  section {
-    background: var(--card);
-    border-radius: 14px;
-    padding: 28px 32px;
-    margin-bottom: 16px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
-  }
-  section h2 {
-    font-size: 22px;
-    font-weight: 600;
-    margin: 0 0 16px;
-    color: var(--text);
-    display: flex;
-    align-items: baseline;
-    gap: 10px;
-  }
-  section h2 .num {
-    color: var(--accent);
-    font-size: 18px;
-    font-weight: 700;
-  }
-  section p {
-    margin: 0 0 12px;
-    font-size: 16px;
-  }
-  section p:last-child { margin-bottom: 0; }
-  ul {
-    margin: 12px 0;
-    padding-left: 20px;
-  }
-  ul li {
-    margin-bottom: 8px;
-    font-size: 16px;
-  }
-  ul li::marker { color: var(--accent); }
-  .intro {
-    background: var(--card);
-    padding: 24px 32px;
-    border-radius: 14px;
-    margin-bottom: 24px;
-    color: var(--muted);
-    font-size: 15px;
-  }
-  .divider {
-    text-align: center;
-    margin: 64px 0 40px;
-    color: var(--muted);
-    font-size: 13px;
-    letter-spacing: 2px;
-  }
-  footer {
-    margin-top: 48px;
-    text-align: center;
-    color: var(--muted);
-    font-size: 13px;
-    padding-top: 32px;
-    border-top: 1px solid var(--border);
-  }
-  footer a { color: var(--accent); text-decoration: none; }
-  code {
-    background: var(--bg);
-    padding: 2px 6px;
-    border-radius: 4px;
-    font-size: 14px;
-    font-family: "SF Mono", Menlo, monospace;
-  }
-</style>
-</head>
-<body>
-<div class="wrap">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0a0a0c" media="(prefers-color-scheme: dark)" />
+    <meta
+      name="description"
+      content="Realtime Interpreter AI turns live speech into translated subtitles and translated headphone audio for meetings, videos, online classes, and international events."
+    />
+    <title>Realtime Interpreter AI</title>
+    <link rel="icon" type="image/png" href="./assets/app-icon.png" />
+    <link rel="apple-touch-icon" href="./assets/app-icon.png" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-nav" aria-label="Primary">
+      <a class="brand" href="#top" aria-label="Realtime Interpreter AI">
+        <img src="./assets/app-icon.png" alt="" />
+        <span>Realtime Interpreter AI</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#features" data-i18n="nav_features">Features</a>
+        <a href="#privacy" data-i18n="nav_privacy">Privacy</a>
+        <a href="#plans" data-i18n="nav_plans">Access</a>
+        <a href="#contact" data-i18n="nav_contact">Contact</a>
+      </nav>
+      <div class="nav-actions" role="group" aria-label="Language">
+        <label class="lang-picker">
+          <span class="visually-hidden" data-i18n="lang_label">Language</span>
+          <select id="lang-select" aria-label="Language">
+            <option value="en">English</option>
+            <option value="zh-Hans">简体中文</option>
+            <option value="zh-Hant">繁體中文</option>
+            <option value="ja">日本語</option>
+            <option value="ko">한국어</option>
+            <option value="fr">Français</option>
+            <option value="de">Deutsch</option>
+            <option value="es">Español</option>
+          </select>
+        </label>
+      </div>
+    </header>
 
-  <header>
-    <h1>Privacy Policy</h1>
-    <p class="subtitle">Realtime Interpreter AI</p>
-    <p class="effective">Effective Date: May 23, 2025 · 生效日期：2025 年 5 月 23 日</p>
-  </header>
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="hero_eyebrow">Available on the App Store</p>
+          <h1 data-i18n="hero_title">Live interpretation for the moments you cannot miss.</h1>
+          <p class="hero-subtitle" data-i18n="hero_subtitle">
+            Realtime Interpreter AI turns meetings, videos, online classes, and live events into translated captions and translated headphone audio.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="https://apps.apple.com/app/id6770194336" data-i18n="hero_cta">View on App Store</a>
+            <a class="button secondary" href="#features" data-i18n="hero_secondary">Explore features</a>
+          </div>
+        </div>
+        <div class="hero-stage" aria-label="App previews">
+          <img class="device ipad" data-shot="ipad-main" src="./assets/ipad-live.png" alt="Realtime Interpreter AI on iPad" />
+          <img class="device iphone" data-shot="iphone-main" src="./assets/iphone-live.png" alt="Live subtitles on iPhone" />
+        </div>
+      </section>
 
-  <div class="lang-switch">
-    <a href="#en">English</a>
-    <a href="#zh">简体中文</a>
-  </div>
+      <section class="intro-band">
+        <p data-i18n="intro">
+          Not an offline translator. A lightweight language layer for live participation.
+        </p>
+      </section>
 
-  <!-- ============ English ============ -->
-  <a id="en"></a>
-  <div class="divider">— ENGLISH —</div>
+      <section id="features" class="section feature-grid">
+        <article class="feature-copy">
+          <p class="eyebrow" data-i18n="features_eyebrow">Live intelligence</p>
+          <h2 data-i18n="features_title">Follow the conversation as it happens.</h2>
+          <p data-i18n="features_body">
+            Choose a target language and start listening. The app detects the input language automatically, shows translated captions, and can speak the translation through your headphones.
+          </p>
+        </article>
+        <div class="feature-list">
+          <div class="feature-item">
+            <span>01</span>
+            <h3 data-i18n="f1_title">Live translated captions</h3>
+            <p data-i18n="f1_body">Built for meetings, lectures, online courses, livestreams, and videos.</p>
+          </div>
+          <div class="feature-item">
+            <span>02</span>
+            <h3 data-i18n="f2_title">Translated headphone audio</h3>
+            <p data-i18n="f2_body">Hear the translation without interrupting the room.</p>
+          </div>
+          <div class="feature-item">
+            <span>03</span>
+            <h3 data-i18n="f3_title">History and Word export</h3>
+            <p data-i18n="f3_body">Save source text and translations for review, copy, and export.</p>
+          </div>
+        </div>
+      </section>
 
-  <div class="intro">
-    This Privacy Policy describes how Realtime Interpreter AI (the "App") collects, uses, and
-    protects your information. We are committed to protecting your privacy and ensuring
-    transparency about our data practices.
-  </div>
+      <section class="showcase">
+        <div class="showcase-copy">
+          <p class="eyebrow" data-i18n="pip_eyebrow">Picture in Picture</p>
+          <h2 data-i18n="pip_title">Captions that float above what you are watching.</h2>
+          <p data-i18n="pip_body">
+            Use PiP captions on iPhone and iPad while watching videos, online classes, or meetings without constant app switching.
+          </p>
+        </div>
+        <img data-shot="iphone-main" src="./assets/iphone-pip-history.png" alt="PiP subtitles" />
+      </section>
 
-  <section>
-    <h2><span class="num">1.</span> Information We Collect</h2>
-    <p>The App collects the following types of information:</p>
-    <ul>
-      <li><strong>Microphone Audio:</strong> When you start a live interpretation session, the App
-        captures audio from your microphone or system audio input. This audio is streamed
-        directly to OpenAI's Realtime API for processing and is <strong>not stored</strong> by the App or on
-        our servers.</li>
-      <li><strong>Transcripts:</strong> The recognized source text and translated text are stored
-        <strong>locally on your device</strong>. You can view, export, and delete these records at any time.</li>
-      <li><strong>Purchase Information:</strong> In-app purchase and subscription transactions are
-        processed entirely by Apple through StoreKit. We do not collect or store your payment
-        details.</li>
-      <li><strong>API Keys:</strong> If you choose to use your own OpenAI API key, it is stored locally
-        on your device and is never transmitted to our servers.</li>
-    </ul>
-    <p>We do not collect names, email addresses, phone numbers, or other personally identifiable
-       information through the App.</p>
-  </section>
+      <section class="section history-layout">
+        <div>
+          <p class="eyebrow" data-i18n="history_eyebrow">From live to archive</p>
+          <h2 data-i18n="history_title">A live session can become a useful record.</h2>
+          <p data-i18n="history_body">
+            History saves recognized source text and translated text. After a meeting, review key points, copy text, or export a Word document.
+          </p>
+        </div>
+        <img data-shot="ipad-main" src="./assets/ipad-history-export.png" alt="History and export on iPad" />
+      </section>
 
-  <section>
-    <h2><span class="num">2.</span> How We Use Your Information</h2>
-    <p>The information collected is used solely for:</p>
-    <ul>
-      <li>Providing real-time speech recognition and translation services</li>
-      <li>Storing your interpretation history locally for later review</li>
-      <li>Managing your purchased minute credits and subscription status</li>
-      <li>Improving app stability and performance through anonymized crash reports
-          (only if enabled at the system level)</li>
-    </ul>
-    <p>We <strong>do not</strong> sell, rent, or share your personal information with third parties for
-       marketing purposes.</p>
-  </section>
+      <section id="privacy" class="privacy-panel">
+        <div>
+          <p class="eyebrow" data-i18n="privacy_eyebrow">Privacy by design</p>
+          <h2 data-i18n="privacy_title">Realtime processing should still feel controlled.</h2>
+        </div>
+        <div class="privacy-points">
+          <p data-i18n="privacy_1">The app asks for explicit AI data-processing consent before sending audio.</p>
+          <p data-i18n="privacy_2">No permanent service key is embedded in the app; developer service access uses short-lived credentials.</p>
+          <p data-i18n="privacy_3">History is user-managed and can be viewed, copied, exported, or deleted.</p>
+        </div>
+      </section>
 
-  <section>
-    <h2><span class="num">3.</span> Data Sharing &amp; Third-Party Services</h2>
-    <p>The App shares data with third parties only as necessary to provide its core
-       functionality:</p>
-    <ul>
-      <li><strong>OpenAI:</strong> Microphone audio, generated transcripts, and the selected target
-        language are sent to OpenAI's Realtime API to provide translation. OpenAI processes this
-        data according to its own privacy policy and API data usage policies.</li>
-      <li><strong>Apple:</strong> Purchase transactions are processed by Apple. Apple's privacy policy
-        governs how your purchase information is handled.</li>
-      <li><strong>Developer Credential Service:</strong> If you use App Credits, a request is sent to the
-        developer's backend (<code>https://caolonghua.com.cn/api/realtime-credential</code>) to obtain a
-        short-lived API credential. This request does not include audio or transcript data.</li>
-    </ul>
-    <p>We do not use any third-party analytics, advertising, or tracking services within the App.</p>
-  </section>
+      <section id="plans" class="section plans-layout">
+        <img data-shot="iphone-main" src="./assets/iphone-plans.png" alt="Plans and App Credits" />
+        <div>
+          <p class="eyebrow" data-i18n="plans_eyebrow">Flexible access</p>
+          <h2 data-i18n="plans_title">Try 1 minute free, or bring your own service credential.</h2>
+          <p data-i18n="plans_body">
+            Use App Credits for a quick start, or enter your own service credential. Purchase screens include privacy policy and terms links.
+          </p>
+          <a class="button primary" href="https://apps.apple.com/app/id6770194336" data-i18n="plans_cta">Download on App Store</a>
+        </div>
+      </section>
 
-  <section>
-    <h2><span class="num">4.</span> Data Retention &amp; Security</h2>
-    <p>Audio data is streamed in real-time and is <strong>not retained</strong> after the interpretation
-       session ends. Transcripts are stored locally on your device and persist until you delete
-       them. No transcript data is transmitted to our servers.</p>
-    <p>We implement reasonable technical measures to protect data in transit, including
-       <strong>TLS encryption</strong> for all network communications. Local data on your device is protected
-       by the security features of your operating system.</p>
-  </section>
+      <section id="contact" class="contact-panel">
+        <div class="contact-card">
+          <p class="eyebrow" data-i18n="contact_eyebrow">Support & Contact</p>
+          <h2 data-i18n="contact_title">We are here when you need us.</h2>
+          <p data-i18n="contact_body">
+            Questions about the app, your subscription, or privacy? Reach us directly. We typically respond within one business day.
+          </p>
+          <a class="button primary contact-mail" href="mailto:10000@caolonghua.com">10000@caolonghua.com</a>
+        </div>
+      </section>
+    </main>
 
-  <section>
-    <h2><span class="num">5.</span> Your Rights</h2>
-    <p>Depending on your jurisdiction, you may have the following rights:</p>
-    <ul>
-      <li><strong>Access &amp; Portability:</strong> View all stored transcripts and export them as DOCX
-        files at any time.</li>
-      <li><strong>Deletion:</strong> Delete individual interpretation records or all data from within the
-        App.</li>
-      <li><strong>Consent Withdrawal:</strong> Stop using the App at any time. The AI data processing
-        consent prompt appears before each new session.</li>
-      <li><strong>Complaint:</strong> Lodge a complaint with your local data protection authority.</li>
-    </ul>
-    <p>For users in the <strong>EU (GDPR)</strong>, <strong>California (CCPA/CPRA)</strong>, <strong>China (PIPL)</strong>, and
-       <strong>Brazil (LGPD)</strong>, additional rights may apply as provided by applicable law. Since all
-       user data is stored locally on your device, you have full control over your data at all
-       times.</p>
-  </section>
-
-  <section>
-    <h2><span class="num">6.</span> Children's Privacy</h2>
-    <p>The App is not directed at children under the age of 13 (or the applicable minimum age in
-       your jurisdiction). We do not knowingly collect personal information from children.</p>
-    <p>If you believe that a child has provided personal information through the App, please
-       contact us and we will take steps to delete such information.</p>
-  </section>
-
-  <section>
-    <h2><span class="num">7.</span> International Data Transfers</h2>
-    <p>When you use the live interpretation feature, audio data is transmitted to OpenAI's
-       servers, which may be located outside your country of residence. By using this feature,
-       you consent to the transfer of your audio data to these servers.</p>
-    <p>We ensure that any such transfers are conducted with appropriate safeguards, including
-       encryption in transit, in compliance with applicable data protection laws.</p>
-  </section>
-
-  <section>
-    <h2><span class="num">8.</span> Changes to This Policy</h2>
-    <p>We may update this Privacy Policy from time to time. Any changes will be reflected in the
-       updated policy within the App and on this page. The Effective Date at the top of this
-       policy indicates when it was last revised.</p>
-    <p>Continued use of the App after changes to this policy constitutes your acceptance of the
-       updated terms.</p>
-  </section>
-
-  <section>
-    <h2><span class="num">9.</span> Contact Us</h2>
-    <p>If you have any questions, concerns, or requests regarding this Privacy Policy, please
-       contact us at: <a href="mailto:caolonghua1995@icloud.com">caolonghua1995@icloud.com</a></p>
-    <p>We will respond to your inquiry within a reasonable timeframe.</p>
-  </section>
-
-  <!-- ============ Chinese ============ -->
-  <a id="zh"></a>
-  <div class="divider">— 简体中文 —</div>
-
-  <div class="intro">
-    本隐私政策描述了 Realtime Interpreter AI（以下简称"本应用"）如何收集、使用和保护您的信息。
-    我们致力于保护您的隐私并确保数据处理的透明度。
-  </div>
-
-  <section>
-    <h2><span class="num">1.</span> 我们收集的信息</h2>
-    <p>本应用收集以下类型的信息：</p>
-    <ul>
-      <li><strong>麦克风音频：</strong>当您开始实时传译时，本应用会从麦克风或系统音频输入捕获音频。
-        此音频<strong>直接流式传输到 OpenAI Realtime API</strong> 进行处理，不会被本应用或我们的服务器存储。</li>
-      <li><strong>转录文本：</strong>识别的原文和翻译文本<strong>存储在您的设备本地</strong>。
-        您可以随时查看、导出和删除这些记录。</li>
-      <li><strong>购买信息：</strong>应用内购买和订阅交易完全由 Apple 通过 StoreKit 处理。
-        我们不收集或存储您的付款详情。</li>
-      <li><strong>API 密钥：</strong>如果您选择使用自己的 OpenAI API 密钥，它将存储在您的设备本地，
-        永远不会传输到我们的服务器。</li>
-    </ul>
-    <p>我们<strong>不通过</strong>本应用收集姓名、电子邮件地址、电话号码或其他个人身份信息。</p>
-  </section>
-
-  <section>
-    <h2><span class="num">2.</span> 我们如何使用您的信息</h2>
-    <p>收集的信息仅用于：</p>
-    <ul>
-      <li>提供实时语音识别和翻译服务</li>
-      <li>在本地存储您的传译历史记录以供日后查看</li>
-      <li>管理您购买的分钟额度和订阅状态</li>
-      <li>通过匿名崩溃报告改善应用稳定性和性能（仅在系统级别启用时）</li>
-    </ul>
-    <p>我们<strong>不会</strong>出于营销目的向第三方出售、出租或分享您的个人信息。</p>
-  </section>
-
-  <section>
-    <h2><span class="num">3.</span> 数据共享与第三方服务</h2>
-    <p>本应用仅在提供核心功能所需时与第三方共享数据：</p>
-    <ul>
-      <li><strong>OpenAI：</strong>麦克风音频、生成的转录文本和选择的目标语言会发送到
-        OpenAI Realtime API 以提供翻译。OpenAI 根据其自身的隐私政策和 API 数据使用政策处理此数据。</li>
-      <li><strong>Apple：</strong>购买交易由 Apple 处理。Apple 的隐私政策规定了如何处理您的购买信息。</li>
-      <li><strong>开发者凭证服务：</strong>如果您使用 App 额度，会向开发者后端
-        （<code>https://caolonghua.com.cn/api/realtime-credential</code>）发送请求以获取短期 API 凭证。
-        此请求不包含音频或转录数据。</li>
-    </ul>
-    <p>我们不在本应用中使用任何第三方分析、广告或跟踪服务。</p>
-  </section>
-
-  <section>
-    <h2><span class="num">4.</span> 数据保留与安全</h2>
-    <p>音频数据以实时方式流式传输，传译结束后<strong>不会保留</strong>。
-       转录文本存储在您的设备本地，在您删除之前一直存在。
-       转录数据不会传输到我们的服务器。</p>
-    <p>我们采取合理的技术措施保护传输中的数据，包括对所有网络通信使用 <strong>TLS 加密</strong>。
-       设备上的本地数据受操作系统安全功能的保护。</p>
-  </section>
-
-  <section>
-    <h2><span class="num">5.</span> 您的权利</h2>
-    <p>根据您所在的司法管辖区，您可能享有以下权利：</p>
-    <ul>
-      <li><strong>访问与可携带性：</strong>您可以随时查看所有存储的转录文本并将其导出为 DOCX 文件。</li>
-      <li><strong>删除：</strong>您可以在应用内删除单个传译记录或所有数据。</li>
-      <li><strong>撤回同意：</strong>您可以随时停止使用本应用。AI 数据处理同意提示会在每次新会话前出现。</li>
-      <li><strong>投诉：</strong>您有权向当地数据保护机构提出投诉。</li>
-    </ul>
-    <p>对于<strong>欧盟 (GDPR)</strong>、<strong>加利福尼亚州 (CCPA/CPRA)</strong>、
-       <strong>中国 (PIPL)</strong>和<strong>巴西 (LGPD)</strong>的用户，
-       适用法律可能赋予额外权利。由于所有用户数据都存储在您的设备本地，您始终可以完全控制自己的数据。</p>
-  </section>
-
-  <section>
-    <h2><span class="num">6.</span> 儿童隐私</h2>
-    <p>本应用不面向 13 岁以下的儿童（或您所在司法管辖区适用的最低年龄）。
-       我们不会故意收集儿童的个人信息。</p>
-    <p>如果您认为有儿童通过本应用提供了个人信息，请联系我们，我们将采取措施删除此类信息。</p>
-  </section>
-
-  <section>
-    <h2><span class="num">7.</span> 国际数据传输</h2>
-    <p>使用实时传译功能时，音频数据会传输到 OpenAI 的服务器，这些服务器可能位于您居住国以外。
-       使用此功能即表示您同意将音频数据传输到这些服务器。</p>
-    <p>我们确保任何此类传输都在适当的保障措施下进行，包括传输中加密，符合适用的数据保护法律。</p>
-  </section>
-
-  <section>
-    <h2><span class="num">8.</span> 政策变更</h2>
-    <p>我们可能会不时更新本隐私政策。任何更改将反映在应用内更新的政策中以及本页面。
-       本政策顶部的生效日期表示上次修订时间。</p>
-    <p>在本政策更改后继续使用本应用即表示您接受更新后的条款。</p>
-  </section>
-
-  <section>
-    <h2><span class="num">9.</span> 联系我们</h2>
-    <p>如果您对本隐私政策有任何疑问、意见或请求，请通过以下方式联系我们：
-       <a href="mailto:caolonghua1995@icloud.com">caolonghua1995@icloud.com</a></p>
-    <p>我们将在合理时间内回复您的咨询。</p>
-  </section>
-
-  <footer>
-    © 2025–2026 Realtime Interpreter AI · Powered by OpenAI Realtime API<br>
-    Contact: <a href="mailto:caolonghua1995@icloud.com">caolonghua1995@icloud.com</a>
-  </footer>
-
-</div>
-</body>
+    <footer class="footer">
+      <div class="footer-brand">
+        <img src="./assets/app-icon.png" alt="" />
+        <div>
+          <strong>Realtime Interpreter AI</strong>
+          <p data-i18n="footer_tagline">Live translated subtitles and voice.</p>
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="https://caolonghua.github.io/realtime-interpreter-ai/privacy.html" data-i18n="footer_privacy">Privacy Policy</a>
+        <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" data-i18n="footer_terms">Terms of Use (EULA)</a>
+        <a href="#contact" data-i18n="footer_support">Support</a>
+        <a href="https://apps.apple.com/app/id6770194336" data-i18n="footer_appstore">App Store</a>
+      </div>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
 </html>
